@@ -1,6 +1,9 @@
 # About project Fatsecret
 FatSecret is a web application that helps users track their calorie intake and maintain a healthy diet. The application provides a database of foods, allowing users to search for and log the foods they eat throughout the day. The app calculate the nutritional information, including the number of calories, fat, protein, and carbohydrates.
 
+# Deploy Link
+https://krishtels.github.io/ITandDDP/
+
 # MockUp Link
 https://www.figma.com/file/ywQbDR73BXArdbOWEmSsT2/fatsecret?node-id=0%3A1&t=tkoHFYWhGmCk4aHn-1
 
