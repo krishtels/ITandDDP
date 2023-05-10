@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FatSecret</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="src/img/logo.svg">
+        </a>
+        <div id="menu-icon">
+            <img src="src/img/menu-regular-24.png">
+        </div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#track">Track</a></li>
+            <li><a href="#calories">Calories</a></li>
+            <li><a href="#services">Meals</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="signup.html" class="sign-up">Sign Up</a>
+            <a href="login.html" class="sign-in">Sign in</a>
+
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Fatsecret</span> best way <br>to track food</h1>
+            <p>Start losing weight the healthy way with easy to use apps, online tools and support.</p>
+            
+        </div>
+        <div class="text">
+            <h2>Know about your health from your <br>
+            <span>Height</span> and  <span>Weight</span></h2>
+            <br>
+            <h2>Calculate your Body Mass Index (BMI) </h2>
+            <br>
+            <button class="btn" id="openBMICalc">BMI Calculater</button>
+            <div class="calculator" id="calculator">
+                <div class="content">
+                    <div class="input">
+                        <label for="height">Height</label>
+                        <input type="number" min="0" id="height" >
+                        <select name="" id="selecth">
+                            <option value="">cm</option>
+                            <option value="">feet</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="weight">Weight</label>
+                        <input type="number" class="input-box" min="0" id="weight" >
+                        <select name="" id="selectw">
+                            <option value="">kg</option>
+                            <option value="">pounds</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="calculateBmi()" id="calculate">Calculate BMI</button>
+                </div>
+                <div class="result">
+                    
+                    <div id="ans"></div>
+                    <p id="status"></p>
+                    <button  class="btn" id="closeBtn">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ride" id="track">
+        <div class="heading">
+            <span>How Its Work</span>
+            <h1>Track Food With 3 Easy Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <img src="src/img/bx-map.svg">
+                <h2>Do it everywhere</h2>
+            </div>
+
+            <div class="box">
+                <img src="src/img/bxs-calendar-check.svg">
+                <h2>Pick-Up Date</h2>
+            </div>
+
+            <div class="box">
+                <img src="src/img/bxs-calendar-star.svg">
+                <h2>Choose food and meal</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="calories" id="calories">
+        <div class="heading">
+            <h1>Amout of calories</h1>
+            
+        </div>
+        
+        <div class="calories-container">
+            <div class="date">
+                <form action="">
+                    <div class="input-box">
+                        <span>Date</span>
+                        <input type="date" >
+                    </div>
+                    <input type="submit" class="btn" value="Find">
+                </form>
+            </div>
+            <div class="nutrition-progress">
+                <div class="fat">
+                    <p>Fat</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="fat">
+                    <p>Carbs</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 55%;"></div>
+                    </div>
+                </div>
+                <div class="fat">
+                    <p>Protein</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+               
+            </div>
+
+
+            <div class="calorie">
+                <div class="calories-goal">
+                    <p class="goal-label">Calorie goal:</p>
+                    <p class="goal-value">2000</p>
+                    <p class="calories-unit">kcal</p>
+                  </div>
+                  <div class="calories-eaten">
+                    <p class="eaten-label">Eaten:</p>
+                    <p class="eaten-value">1500</p>
+                    <p class="calories-unit">kcal</p>
+                  </div>
+                  <div class="calories-remaining">
+                    <p class="remaining-label">Remain:</p>
+                    <p class="remaining-value">500</p>
+                    <p class="calories-unit">kcal</p>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 75%;"></div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Meals</span>
+            <h1>Choose meal type </h1>
+        </div>
+        <div class="services-containers">
+            <div class="box">
+                <div class="box-img">
+                    <img src="src/img/break3.svg" alt="">
+                </div>
+                <p2>Morning</p2>
+                <h3>Breakfast</h3>
+                <h2>500 <span>kcal</span></h2>
+                <button class="btn openCalorieFormBtn" data-target="popupForm">Add Food</button>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="src/img/lunch1.svg" alt="">
+                </div>
+                <p2>Day</p2>
+                <h3>Lanch</h3>
+                <h2>0 <span>kcal</span></h2>
+                <button class="btn openCalorieFormBtn" data-target="popupForm">Add Food</button>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="src/img/dinner1.svg" alt="">
+                </div>
+                <p2>Evening</p2>
+                <h3>Dinner</h3>
+                <h2>0 <span>kcal</span></h2>
+                <button class="btn openCalorieFormBtn" data-target="popupForm">Add Food</button>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="src/img/snacks.svg" alt="">
+                </div>
+                <p2>All day</p2>
+                <h3>Snack</h3>
+                <h2>0 <span>kcal</span></h2>
+                <button class="btn openCalorieFormBtn" data-target="popupForm">Add Food</button>
+            </div>
+        </div>
+        <div id="popupForm" class="form-container">
+            <h3>Add new food</h3>
+            <form id="calorieForm">
+              <label for="nameFoodInput">Dish name:</label>
+              <input type="text" class="input-box" id="nameFoodInput" required>
+              <br>
+              <label for="gramsInput">Gramm:</label>
+              <input type="number" class="input-box" id="gramsInput" required>
+              <br>
+              <label for="caloriesInput">Calories:</label>
+              <input type="number" class="input-box" id="caloriesInput" required>
+              <br>
+              <button class="btn" type="submit">Add dish</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Best Food Tracker</h1>
+        </div>
+
+        <div class="about-container">
+            <div class="about-img">
+                <img src="src/img/lose-it.png">
+            </div>
+
+            <div class="about-text">
+                <span>About Us</span>
+                <p>FatSecret is a popular weight loss and diet tracking app that allows users to track their daily calorie intake, set weight loss goals.  Users can log their meals and snacks, scan barcodes to quickly input food information, and even create custom recipes to track their nutritional information.</p>
+                <a href="" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <script src="src/js/main.js"></script>
+    <script src="src/js/bmi.js"></script>
+
+</body>
+</html>
