@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --main-color: #fe5b3d; 
+    --second-color: #ffac38; 
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38)
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 2.5rem 6rem;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 1rem 6rem;
+}
+
+.logo img {
+ width: 2.5rem;   
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.header-btn a {
+    padding: 0.7rem 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.header-btn .sign-in{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(../img/backgroung.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1fr);
+}
+
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.text p {
+    margin: 0.5rem 0.1rem;
+}
+
+.text .btn {
+    flex: 1 1 7rem;
+    padding: 0.7rem 2.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #474fa0;
+    color: #fff;
+}
+.text .btn:hover{
+    background: var(--main-color);
+}
+
+.calculator {
+    width: 80vw;
+    max-width: 100%;
+    position: absolute;
+    display: none;
+    padding: 2em;
+    z-index: 9999;
+    background-color: #eeeff1;
+    box-shadow: 0 0 0.1rem 0.1rem #000;
+}
+
+.calculator .content{
+    align-items: center;
+    gap: 1rem;
+    bottom: 4rem;
+    border-radius: 0.5rem;
+
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+.input input, label{
+    margin: 0.5em;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.input select{
+    margin: 0.5em;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.calculator .btn {
+    flex: 1 1 7rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #474fa0;
+    color: #fff;
+}
+
+.calculator .btn:hover{
+    background: var(--main-color);
+}
+
+.form-container {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    padding: 1.7rem;
+    z-index: 9999;
+    box-shadow: 0 0 0.1rem 0.1rem #000;
+
+  }
+  
+.form-container form{
+    align-items: center;
+    gap: 1rem;
+    bottom: 4rem;
+    border-radius: 0.5rem;
+}
+
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-box input{
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-container form .btn {
+    flex: 1 1 7rem;
+    padding: 0.7rem 2.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #474fa0;
+    color: #fff;
+}
+
+.form-container form .btn:hover{
+    background: var(--main-color);
+}
+
+.heading  {
+    text-align: center;
+}
+
+.heading span {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading h1 {
+    font-size: 2rem;
+}
+
+.ride-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ride-container .box{
+    text-align: center;
+    padding: 2rem;
+}
+
+.ride-container .box img{
+    padding: 0.8rem;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+} 
+
+.ride-container .box h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+} 
+
+.ride-container .box img:hover{
+    background: var(--gradient);
+}
+
+.date form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    bottom: 4rem;
+    left: 6rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.date form .btn {
+    flex: 1 1 7rem;
+    padding: 1.5rem 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #474fa0;
+    color: #fff;
+}
+
+.date form .btn:hover{
+    background: var(--main-color);
+}
+
+.calories-container {
+    position: relative;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nutrition-progress {
+    min-height: 15vh;
+    height: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+.progress-bar {
+height: 100%;
+background-color: #eee;
+}
+
+.calories-goal,
+.calories-eaten,
+.calories-remaining {
+  display: flex;
+  align-items: center;
+}
+
+.goal-label,
+.eaten-label,
+.remaining-label {
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.calories-unit {
+  margin-left: 1rem;
+}
+
+.progress-bar {
+  height: 1rem;
+  background-color: #eee;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.services-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.services-containers .box{
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.2rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.services-containers .box .box-img{
+    width: 100%;
+    height: 15rem;
+}
+
+.services-containers .box .box-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.services-containers .box p {
+    padding: 0 0.5rem;
+    border: 0.1rem solid --text-color;
+    width: 3rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+}
+
+.services-containers .box h3 {
+    font-weight: 500;
+}
+
+.services-containers .box h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 0.2rem 0 0.5rem;
+}
+
+.services-containers .box span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.services-containers .box .btn {
+    display: flex;
+    justify-self: center;
+    background: #474fa0;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+
+}
+
+.services-containers .box .btn:hover{
+    background: var(--main-color);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-img img {
+    width:60%;
+}
+
+.about-text span {
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.about-text p{
+    margin: 0.5rem 0 1.4rem;
+}
+
+.about-text .btn{
+    background: #474fa0;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.about-text .btn:hover{
+    background: var(--main-color);
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 1.1rem 3rem;
+    }
+    section {
+        padding: 3.7rem 3rem;
+    }
+}
+
+@media (max-width: 891px) {
+    .home{
+        background-position: left;
+    }
+    .form-container form{
+        bottom: 0.2rem;
+    }
+}
+
+@media (max-width: 785px) {
+    header {
+        padding: 0.8rem 3rem;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .text h1 {
+        font-size: 2.5rem;
+    }
+    .home {
+        grid-template-columns: 1fr;
+    }
+    .calories-container {
+        grid-template-columns: 1fr;
+    }
+    .form-container form {
+        position: unset;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: -30rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 0.2rem 0.2rem rgda(0, 0, 0, 0.1);
+        transition: 0.2s ease;
+        text-align: left;
+    }
+    .navbar.active {
+        top:100%
+    }
+    .navbar a{
+        padding: 1rem;
+        border-left: 0.1rem solid var(--main-color);
+        margin:  1rem;
+        display: block;
+    }
+    .navbar a:hover{
+        color: #fff;
+        background: var(--main-color);
+        border: none;
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .heading span {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .heading h1 {
+        font-size: 1.3rem;
+    } 
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-img {
+        padding: 1rem;
+        order: 2;
+    }
+}
+
+@media (max-width: 350px){
+    header {
+        padding: 0.4rem 1rem;
+    }
+    .logo img {
+        width: 1.8rem;
+    }
+    section {
+        padding: 3.5rem 1rem;
+    }
+    .header-btn .sign-in{
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .text h1 {
+        font-size: 2rem;
+    }
+    .form-container {
+        padding-top: 2rem;
+    }
+    .services-containers {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+    }
+}
+
+
